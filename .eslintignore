@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+
+# public
+/public
+
+# production
+/build
+
+serviceWorker.js
