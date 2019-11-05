@@ -2,23 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  firstDisplayValue: PropTypes.number.isRequired,
-  operation: PropTypes.string,
-  secondDisplayValue: PropTypes.number,
+  value: PropTypes.string.isRequired,
 };
 
-const CalculatorDisplay = ({
-  firstDisplayValue,
-  operation,
-  secondDisplayValue,
-}) => {
+const CalculatorDisplay = ({ value }) => {
   return (
     <div>
-      <h1>
-        {firstDisplayValue}
-        {operation && operation}
-        {operation && secondDisplayValue && secondDisplayValue}
-      </h1>
+      <h1>{value}</h1>
     </div>
   );
 };
