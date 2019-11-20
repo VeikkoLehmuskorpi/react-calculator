@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import CalculatorDisplay from './CalculatorDisplay';
 import CalculatorButtonPanel from './CalculatorButtonPanel';
 
@@ -151,11 +152,22 @@ const Calculator = () => {
   };
 
   return (
-    <div>
+    <StyledCalculator>
       <CalculatorDisplay value={next || total || '0'} />
       <CalculatorButtonPanel clickHandler={handleClick} />
-    </div>
+    </StyledCalculator>
   );
 };
 
 export default Calculator;
+
+const StyledCalculator = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #333333;
+  padding: 1.3rem;
+  box-shadow: 0.2rem 0.4rem 3rem;
+  width: 100vw;
+  max-width: 500px;
+  border-radius: 0.3rem;
+`;
