@@ -8,9 +8,9 @@ const Calculator = () => {
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
 
-  console.log(
+  /* console.log(
     `Operation: ${operation} (${typeof operation}), total: ${total} (${typeof total}), nextValue: ${next} (${typeof next})`
-  );
+  ); */
 
   const isNumber = valueToCheck => {
     return Number.isInteger(valueToCheck);
@@ -63,7 +63,6 @@ const Calculator = () => {
     // Percentage
     if (operation === '%') {
       const result = totalNbr / 100;
-      console.log(result);
       const resultStr = String(result);
 
       setTotal(resultStr);
@@ -98,8 +97,9 @@ const Calculator = () => {
       }
 
       // Operation selected already
-      const numberStr = String(buttonName);
-      setNext(numberStr);
+      const number = Number(buttonName);
+      const result = String(next + number);
+      setNext(result);
     }
 
     // Plus
@@ -125,7 +125,6 @@ const Calculator = () => {
     // Percentage
     if (buttonName === '%') {
       setOperation(buttonName);
-      // TODO: This gets called immediately but the state value is not updated until the next render, so when operate method is called, there's no operation in the state and nothing is operated.
       operate();
     }
 
@@ -140,8 +139,8 @@ const Calculator = () => {
 
     // Get total
     if (buttonName === '=') {
-      // Only operate if there's a next value to operate on
-      if (next) {
+      // Only operate if there's a next value to operate on, except in case of percentage operation
+      if (next || operation === '%') {
         operate();
       }
     }
