@@ -12,8 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --verbose",
-    "test:coverage": "react-scripts test --env=jsdom --coverage --verbose",
+    "test": "react-scripts test --env=jsdom --verbose --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "setup": "npm ci",
     "lint": "eslint .",
