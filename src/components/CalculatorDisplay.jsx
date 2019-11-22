@@ -6,6 +6,11 @@ const propTypes = {
   value: PropTypes.string.isRequired,
 };
 
+/**
+ * Calculator Display
+ * @param {object} props - Props
+ * @returns {component} - StyledCalculatorDisplay
+ */
 const CalculatorDisplay = ({ value }) => {
   return (
     <StyledCalculatorDisplay>

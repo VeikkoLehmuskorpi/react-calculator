@@ -8,3 +8,9 @@
 /build
 
 serviceWorker.js
+
+# documentation
+/docs
+
+# coverage
+/coverage

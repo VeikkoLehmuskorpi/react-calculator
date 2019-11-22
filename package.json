@@ -18,7 +18,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check src/**",
-    "format:fix": "prettier --write src/**"
+    "format:fix": "prettier --write src/**",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -63,6 +64,7 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.0.8",
+    "jsdoc": "^3.6.3",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2"
   }

@@ -7,7 +7,16 @@ const propTypes = {
   name: PropTypes.string.isRequired,
 };
 
+/**
+ * Calculator Button
+ * @param {object} props - Props
+ * @returns {component} - StyledButton
+ */
 const CalculatorButton = ({ clickHandler, name }) => {
+  /**
+   * Handle click
+   * @returns {void}
+   */
   const handleClick = () => {
     clickHandler(name);
   };

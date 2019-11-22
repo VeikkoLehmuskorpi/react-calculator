@@ -1,0 +1,20 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "include": ["./src"]
+  },
+  "plugins": ["plugins/markdown"],
+  "opts": {
+    "encoding": "utf8",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true,
+    "readme": "./readme.md"
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  }
+}
