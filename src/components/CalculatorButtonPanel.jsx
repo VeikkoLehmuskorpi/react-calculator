@@ -23,8 +23,8 @@ const CalculatorButtonPanel = ({ clickHandler }) => {
 
       <CalculatorButtonRow>
         <CalculatorButton name="7" clickHandler={handleClick} />
-        <CalculatorButton name="9" clickHandler={handleClick} />
         <CalculatorButton name="8" clickHandler={handleClick} />
+        <CalculatorButton name="9" clickHandler={handleClick} />
         <CalculatorButton name="÷" clickHandler={handleClick} />
       </CalculatorButtonRow>
 
@@ -39,12 +39,11 @@ const CalculatorButtonPanel = ({ clickHandler }) => {
         <CalculatorButton name="1" clickHandler={handleClick} />
         <CalculatorButton name="2" clickHandler={handleClick} />
         <CalculatorButton name="3" clickHandler={handleClick} />
-        <CalculatorButton name="+" clickHandler={handleClick} />
+        <CalculatorButton name="." clickHandler={handleClick} />
       </CalculatorButtonRow>
 
       <CalculatorButtonRow>
         <CalculatorButton name="0" clickHandler={handleClick} />
-        <CalculatorButton name="." clickHandler={handleClick} />
         <CalculatorButton name="=" clickHandler={handleClick} />
       </CalculatorButtonRow>
     </StyledCalculatorButtonPanel>
